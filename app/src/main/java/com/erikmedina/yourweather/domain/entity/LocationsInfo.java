@@ -8,14 +8,14 @@ import java.util.List;
  * Created by erik on 25/03/17.
  */
 
-public class LocationInfo {
+public class LocationsInfo {
 
   @SerializedName("totalResultsCount")
   @Expose
-  public int totalResultsCount;
+  private int totalResultsCount;
   @SerializedName("geonames")
   @Expose
-  public List<Geoname> geonames;
+  private List<Geoname> geonames;
 
   public int getTotalResultsCount() {
     return totalResultsCount;

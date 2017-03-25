@@ -11,19 +11,19 @@ public class Bbox {
 
   @SerializedName("east")
   @Expose
-  public double east;
+  private double east;
   @SerializedName("south")
   @Expose
-  public double south;
+  private double south;
   @SerializedName("north")
   @Expose
-  public double north;
+  private double north;
   @SerializedName("west")
   @Expose
-  public double west;
+  private double west;
   @SerializedName("accuracyLevel")
   @Expose
-  public int accuracyLevel;
+  private int accuracyLevel;
 
   public double getEast() {
     return east;

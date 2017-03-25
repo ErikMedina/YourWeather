@@ -11,16 +11,16 @@ public class AlternateName {
 
   @SerializedName("name")
   @Expose
-  public String name;
+  private String name;
   @SerializedName("lang")
   @Expose
-  public String lang;
+  private String lang;
   @SerializedName("isShortName")
   @Expose
-  public boolean isShortName;
+  private boolean isShortName;
   @SerializedName("isPreferredName")
   @Expose
-  public boolean isPreferredName;
+  private boolean isPreferredName;
 
   public String getName() {
     return name;

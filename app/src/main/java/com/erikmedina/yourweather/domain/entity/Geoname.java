@@ -12,103 +12,103 @@ public class Geoname {
 
   @SerializedName("timezone")
   @Expose
-  public Timezone timezone;
+  private Timezone timezone;
   @SerializedName("bbox")
   @Expose
-  public Bbox bbox;
+  private Bbox bbox;
   @SerializedName("asciiName")
   @Expose
-  public String asciiName;
+  private String asciiName;
   @SerializedName("countryId")
   @Expose
-  public String countryId;
+  private String countryId;
   @SerializedName("fcl")
   @Expose
-  public String fcl;
+  private String fcl;
   @SerializedName("score")
   @Expose
-  public double score;
+  private double score;
   @SerializedName("adminId2")
   @Expose
-  public String adminId2;
+  private String adminId2;
   @SerializedName("adminId3")
   @Expose
-  public String adminId3;
+  private String adminId3;
   @SerializedName("countryCode")
   @Expose
-  public String countryCode;
+  private String countryCode;
   @SerializedName("adminId1")
   @Expose
-  public String adminId1;
+  private String adminId1;
   @SerializedName("lat")
   @Expose
-  public String lat;
+  private String lat;
   @SerializedName("fcode")
   @Expose
-  public String fcode;
+  private String fcode;
   @SerializedName("continentCode")
   @Expose
-  public String continentCode;
+  private String continentCode;
   @SerializedName("adminCode2")
   @Expose
-  public String adminCode2;
+  private String adminCode2;
   @SerializedName("adminCode3")
   @Expose
-  public String adminCode3;
+  private String adminCode3;
   @SerializedName("adminCode1")
   @Expose
-  public String adminCode1;
+  private String adminCode1;
   @SerializedName("lng")
   @Expose
-  public String lng;
+  private String lng;
   @SerializedName("geonameId")
   @Expose
-  public int geonameId;
+  private int geonameId;
   @SerializedName("toponymName")
   @Expose
-  public String toponymName;
+  private String toponymName;
   @SerializedName("population")
   @Expose
-  public int population;
+  private int population;
   @SerializedName("adminName5")
   @Expose
-  public String adminName5;
+  private String adminName5;
   @SerializedName("adminName4")
   @Expose
-  public String adminName4;
+  private String adminName4;
   @SerializedName("adminName3")
   @Expose
-  public String adminName3;
+  private String adminName3;
   @SerializedName("alternateNames")
   @Expose
-  public List<AlternateName> alternateNames = null;
+  private List<AlternateName> alternateNames = null;
   @SerializedName("adminName2")
   @Expose
-  public String adminName2;
+  private String adminName2;
   @SerializedName("name")
   @Expose
-  public String name;
+  private String name;
   @SerializedName("fclName")
   @Expose
-  public String fclName;
+  private String fclName;
   @SerializedName("countryName")
   @Expose
-  public String countryName;
+  private String countryName;
   @SerializedName("fcodeName")
   @Expose
-  public String fcodeName;
+  private String fcodeName;
   @SerializedName("adminName1")
   @Expose
-  public String adminName1;
+  private String adminName1;
   @SerializedName("adminTypeName")
   @Expose
-  public String adminTypeName;
+  private String adminTypeName;
   @SerializedName("elevation")
   @Expose
-  public int elevation;
+  private int elevation;
   @SerializedName("cc2")
   @Expose
-  public String cc2;
+  private String cc2;
 
   public Timezone getTimezone() {
     return timezone;

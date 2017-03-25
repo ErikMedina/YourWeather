@@ -11,13 +11,13 @@ public class Timezone {
 
   @SerializedName("gmtOffset")
   @Expose
-  public int gmtOffset;
+  private int gmtOffset;
   @SerializedName("timeZoneId")
   @Expose
-  public String timeZoneId;
+  private String timeZoneId;
   @SerializedName("dstOffset")
   @Expose
-  public int dstOffset;
+  private int dstOffset;
 
   public int getGmtOffset() {
     return gmtOffset;
