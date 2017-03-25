@@ -4,7 +4,6 @@ import com.erikmedina.yourweather.domain.entity.LocationsInfo;
 import com.erikmedina.yourweather.domain.interactor.GetLocationsInfoInteractor;
 import com.erikmedina.yourweather.domain.interactor.GetLocationsInfoInteractor.OnGetLocationsInfoListener;
 import com.erikmedina.yourweather.domain.interactor.GetLocationsInfoInteractorImpl;
-import timber.log.Timber;
 
 /**
  * Created by erik on 25/03/17.
@@ -34,7 +33,7 @@ class SearchablePresenterImpl implements SearchablePresenter {
             new OnGetLocationsInfoListener() {
               @Override
               public void onGetLocationsInfoSuccess(LocationsInfo locationsInfo) {
-                Timber.i(locationsInfo.toString());
+//               getWeather(locationsInfo.getGeonames().g);
               }
 
               @Override

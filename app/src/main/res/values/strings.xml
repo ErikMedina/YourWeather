@@ -2,4 +2,6 @@
   <string name="app_name">YourWeather</string>
   <string name="search_hint">Buscar</string>
   <string name="search">Search</string>
+  <string name="name">Name:</string>
+  <string name="country">Country:</string>
 </resources>
