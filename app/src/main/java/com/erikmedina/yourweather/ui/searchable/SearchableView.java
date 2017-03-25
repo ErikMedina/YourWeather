@@ -6,4 +6,9 @@ package com.erikmedina.yourweather.ui.searchable;
 
 public interface SearchableView {
 
+  void setName(String name);
+
+  void setCountryName(String countryName);
+
+  void setMapPosition(double lat, double lng);
 }

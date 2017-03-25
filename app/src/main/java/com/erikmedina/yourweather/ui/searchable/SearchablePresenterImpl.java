@@ -33,7 +33,7 @@ class SearchablePresenterImpl implements SearchablePresenter {
             new OnGetLocationsInfoListener() {
               @Override
               public void onGetLocationsInfoSuccess(LocationsInfo locationsInfo) {
-//               getWeather(locationsInfo.getGeonames().g);
+                initView(locationsInfo);
               }
 
               @Override
@@ -41,5 +41,14 @@ class SearchablePresenterImpl implements SearchablePresenter {
 
               }
             });
+  }
+
+  private void initView(LocationsInfo locationsInfo) {
+    if (view != null) {
+      view.setName(locationsInfo.getGeonames().get(0).getName());
+      view.setCountryName(locationsInfo.getGeonames().get(0).getCountryName());
+      view.setMapPosition(Double.parseDouble(locationsInfo.getGeonames().get(0).getLat()),
+          Double.parseDouble(locationsInfo.getGeonames().get(0).getLng()));
+    }
   }
 }
