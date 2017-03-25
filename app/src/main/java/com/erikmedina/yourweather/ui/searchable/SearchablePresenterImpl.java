@@ -1,4 +1,4 @@
-package com.erikmedina.yourweather.ui.search;
+package com.erikmedina.yourweather.ui.searchable;
 
 import com.erikmedina.yourweather.domain.entity.LocationsInfo;
 import com.erikmedina.yourweather.domain.interactor.GetLocationsInfoInteractor;
@@ -10,7 +10,7 @@ import timber.log.Timber;
  * Created by erik on 25/03/17.
  */
 
-class SearchPresenterImpl implements SearchPresenter {
+class SearchablePresenterImpl implements SearchablePresenter {
 
   private final int MAX_ROWS = 20;
   private final int START_ROW = 0;
@@ -19,10 +19,10 @@ class SearchPresenterImpl implements SearchPresenter {
   private final String USERNAME_1 = "ilgeonamessample";
   private final String USERNAME_2 = "demo";
 
-  private SearchView view;
+  private SearchableView view;
   private GetLocationsInfoInteractor getLocationsInfoInteractor;
 
-  public SearchPresenterImpl(SearchView view) {
+  public SearchablePresenterImpl(SearchableView view) {
     this.view = view;
     getLocationsInfoInteractor = new GetLocationsInfoInteractorImpl();
   }
