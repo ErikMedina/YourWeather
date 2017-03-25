@@ -6,4 +6,5 @@ package com.erikmedina.yourweather.ui.search;
 
 public interface SearchPresenter {
 
+  void searchLocation(String location);
 }

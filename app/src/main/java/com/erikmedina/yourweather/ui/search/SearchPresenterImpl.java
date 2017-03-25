@@ -6,4 +6,8 @@ package com.erikmedina.yourweather.ui.search;
 
 class SearchPresenterImpl implements SearchPresenter {
 
+  @Override
+  public void searchLocation(String location) {
+
+  }
 }
