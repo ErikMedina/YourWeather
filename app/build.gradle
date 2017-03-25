@@ -13,7 +13,7 @@ android {
     }
     buildTypes {
         all {
-            buildConfigField("String", "API_ENDPOINT", "\"http://api.geonames.org/searchJSON\"")
+            buildConfigField("String", "API_ENDPOINT", "\"http://api.geonames.org/\"")
         }
         debug {
             applicationIdSuffix '.debug'

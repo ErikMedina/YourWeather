@@ -11,12 +11,14 @@ import retrofit2.http.Query;
 
 public interface MyApiEndpointInterface {
 
-  @GET
-  Call<LocationsInfo> getLocationsInfo(@Query("q") String city,
+  @GET("searchJSON")
+  Call<LocationsInfo> getLocationsInfo(
+      @Query("q") String city,
       @Query("maxRows") int maxRows,
       @Query("startRow") int startRow,
       @Query("lang") String language,
       @Query("isNameRequired") boolean isNameRequired,
       @Query("style") String style,
-      @Query("username") String username);
+      @Query("username") String username
+  );
 }
