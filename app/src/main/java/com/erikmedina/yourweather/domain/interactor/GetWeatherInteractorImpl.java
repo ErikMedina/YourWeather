@@ -11,7 +11,7 @@ import retrofit2.Response;
  * Created by erik on 25/03/17.
  */
 
-class GetWeatherInteractorImpl implements GetWeatherInteractor {
+public class GetWeatherInteractorImpl implements GetWeatherInteractor {
 
   private MyApiEndpointInterface myApiEndpointInterface;
 

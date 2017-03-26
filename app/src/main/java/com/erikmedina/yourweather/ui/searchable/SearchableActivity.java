@@ -67,7 +67,7 @@ public class SearchableActivity extends FragmentActivity
         final LatLng LOCATION_1 = new LatLng(lat, lng);
         CameraPosition cameraPosition = new CameraPosition.Builder()
             .target(LOCATION_1)
-            .zoom(17)
+            .zoom(15)
             .bearing(90)
             .tilt(30)
             .build();
