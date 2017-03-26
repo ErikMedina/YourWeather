@@ -1,5 +1,7 @@
 package com.erikmedina.yourweather.ui.searchable;
 
+import com.erikmedina.yourweather.MyApplication;
+import com.erikmedina.yourweather.R;
 import com.erikmedina.yourweather.domain.entity.Bbox;
 import com.erikmedina.yourweather.domain.entity.LocationsInfo;
 import com.erikmedina.yourweather.domain.entity.Weather;
@@ -43,8 +45,15 @@ class SearchablePresenterImpl implements SearchablePresenter {
             new OnGetLocationsInfoListener() {
               @Override
               public void onGetLocationsInfoSuccess(LocationsInfo locationsInfo) {
-                initView(locationsInfo);
-                getWeather(locationsInfo.getGeonames().get(FIRST_ITEM).getBbox());
+                if (!locationsInfo.getGeonames().isEmpty()) {
+                  initView(locationsInfo);
+                  getWeather(locationsInfo.getGeonames().get(FIRST_ITEM).getBbox());
+                } else {
+                  if (view != null) {
+                    view.showMessage(
+                        MyApplication.getContext().getResources().getString(R.string.error_city));
+                  }
+                }
               }
 
               @Override

@@ -13,4 +13,6 @@ public interface SearchableView {
   void setMapPosition(double lat, double lng);
 
   void setTemperature(int mediumTemperature);
+
+  void showMessage(String message);
 }

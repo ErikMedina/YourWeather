@@ -1,6 +1,7 @@
 package com.erikmedina.yourweather;
 
 import android.app.Application;
+import android.content.Context;
 import com.erikmedina.yourweather.util.log.CrashReportingTree;
 import timber.log.Timber;
 
@@ -10,10 +11,12 @@ import timber.log.Timber;
 
 public class MyApplication extends Application {
 
+  private static Context context;
+
   @Override
   public void onCreate() {
     super.onCreate();
-
+    context = this;
     configTimber();
   }
 
@@ -23,5 +26,9 @@ public class MyApplication extends Application {
     } else {
       Timber.plant(new CrashReportingTree());
     }
+  }
+
+  public static Context getContext() {
+    return context;
   }
 }

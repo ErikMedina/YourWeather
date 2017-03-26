@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentActivity;
 import android.view.animation.LinearInterpolator;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.erikmedina.yourweather.R;
@@ -76,7 +77,6 @@ public class SearchableActivity extends FragmentActivity
         CameraPosition cameraPosition = new CameraPosition.Builder()
             .target(LOCATION_1)
             .zoom(15)
-            .bearing(90)
             .tilt(30)
             .build();
         googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
@@ -92,5 +92,10 @@ public class SearchableActivity extends FragmentActivity
     progressAnimator.setDuration(1000);
     progressAnimator.setInterpolator(new LinearInterpolator());
     progressAnimator.start();
+  }
+
+  @Override
+  public void showMessage(String message) {
+    Toast.makeText(this, message, Toast.LENGTH_LONG).show();
   }
 }

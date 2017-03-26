@@ -1,7 +1,8 @@
 <resources>
   <string name="app_name">YourWeather</string>
-  <string name="search_hint">Buscar</string>
+  <string name="search_hint">City...</string>
   <string name="search">Search</string>
   <string name="name">Name:</string>
   <string name="country">Country:</string>
+  <string name="error_city">The city does not exist</string>
 </resources>
