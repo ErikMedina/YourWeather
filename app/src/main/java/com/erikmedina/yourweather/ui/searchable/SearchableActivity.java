@@ -4,6 +4,7 @@ import android.animation.ObjectAnimator;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.SearchRecentSuggestions;
 import android.support.v4.app.FragmentActivity;
 import android.view.animation.LinearInterpolator;
 import android.widget.ProgressBar;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.erikmedina.yourweather.R;
+import com.erikmedina.yourweather.util.suggestion.MySuggestionProvider;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -46,6 +48,9 @@ public class SearchableActivity extends FragmentActivity
   private void handleIntent(Intent intent) {
     if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
       String query = intent.getStringExtra(SearchManager.QUERY);
+      SearchRecentSuggestions suggestions = new SearchRecentSuggestions(this,
+          MySuggestionProvider.AUTHORITY, MySuggestionProvider.MODE);
+      suggestions.saveRecentQuery(query, null);
       searchablePresenter.searchLocation(query);
     }
   }
@@ -82,7 +87,8 @@ public class SearchableActivity extends FragmentActivity
   @Override
   public void setTemperature(int mediumTemperature) {
     ProgressBar mProgressBar = (ProgressBar) findViewById(R.id.pb_loading);
-    ObjectAnimator progressAnimator = ObjectAnimator.ofInt(mProgressBar, "progress", 0, mediumTemperature);
+    ObjectAnimator progressAnimator = ObjectAnimator
+        .ofInt(mProgressBar, "progress", 0, mediumTemperature);
     progressAnimator.setDuration(1000);
     progressAnimator.setInterpolator(new LinearInterpolator());
     progressAnimator.start();
