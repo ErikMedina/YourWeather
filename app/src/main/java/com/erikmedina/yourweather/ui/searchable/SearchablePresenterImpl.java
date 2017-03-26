@@ -68,7 +68,9 @@ class SearchablePresenterImpl implements SearchablePresenter {
         USERNAME_1, new OnGetWeatherListener() {
           @Override
           public void onGetWeatherSuccess(Weather weather) {
-            getMediumTemperature(weather);
+            if (view != null) {
+              view.setTemperature(getMediumTemperature(weather));
+            }
           }
 
           @Override

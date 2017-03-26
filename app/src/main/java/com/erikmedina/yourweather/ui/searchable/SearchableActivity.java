@@ -1,9 +1,12 @@
 package com.erikmedina.yourweather.ui.searchable;
 
+import android.animation.ObjectAnimator;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.animation.LinearInterpolator;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -72,8 +75,16 @@ public class SearchableActivity extends FragmentActivity
             .tilt(30)
             .build();
         googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-
       }
     });
+  }
+
+  @Override
+  public void setTemperature(int mediumTemperature) {
+    ProgressBar mProgressBar = (ProgressBar) findViewById(R.id.pb_loading);
+    ObjectAnimator progressAnimator = ObjectAnimator.ofInt(mProgressBar, "progress", 0, mediumTemperature);
+    progressAnimator.setDuration(1000);
+    progressAnimator.setInterpolator(new LinearInterpolator());
+    progressAnimator.start();
   }
 }
